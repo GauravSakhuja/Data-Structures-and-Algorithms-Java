@@ -27,14 +27,14 @@ public class MyQueue {
          this.last = var2;
       }
 
-   }
+   }//O(1)
   //removes first element
    void dequeue() {
       Item var1 = this.first;
       this.first = this.first.next;
       first.prev= null;
       var1 = null;
-   }
+   }//O(1)
 
   //returns last element
    Item peek() {
@@ -49,6 +49,6 @@ public class MyQueue {
          current=current.next; 
       }
 
-   }
+   }//O(n)
 }
     
