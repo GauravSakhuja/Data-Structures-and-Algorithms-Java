@@ -1,6 +1,6 @@
-public class MyStack {
-   Item top = null;//top
-   Item botton = null;//bottom
+ class MyStack {
+   public Item top = null;//top
+   public Item botton = null;//bottom
 
    public static void main(String[] var0) {
       MyStack var1 = new MyStack();
@@ -23,6 +23,7 @@ public class MyStack {
       } else {
          var2 = new Item(var1);
          var2.prev = this.top;
+         top.next = var2;
          this.top = var2;
       }
 
@@ -44,6 +45,21 @@ public class MyStack {
          System.out.println("Stack LIFO >> " + var1.value);
       }
 
+   }
+
+   Item getTop()
+   {
+     return this.top;
+   }
+
+   Item getBottom()
+   {
+     return this.botton;
+   }
+
+   void setBottom(Item b)
+   {
+     this.botton= b;
    }
 }
     
